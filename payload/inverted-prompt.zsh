@@ -9,7 +9,7 @@ add-zsh-hook -d precmd _robco_header_address
 add-zsh-hook precmd _robco_header_address
 
 # Plain green prompts; only editable command text uses black on green.
-PROMPT=$'\n %F{green}[${_robco_header_hex}] [${_robco_identity}] [%D{%H:%M:%S}] [${_retro_crt_result}%F{green}${_retro_crt_duration}]%(1j. [JOBS:%j].)%f\n%F{green}  ${_robco_location/#[~]//home}%f${_retro_crt_git}\n %F{green}[>]%f  '
+PROMPT=$'\n %F{green}[${_robco_header_hex}] [${_robco_identity}] [%D{%H:%M:%S}] [${_retro_crt_result}%F{green}${_retro_crt_duration}]%(1j. [JOBS:%j].)%f\n%F{green}  ${_robco_location/#[~]//home}%f${_retro_crt_git:+\n }${_retro_crt_git}\n %F{green}[>]%f  '
 RPROMPT=''
 # ZLE confines this style to input and resets it before command output.
 # Save the previous array once so re-sourcing is safe and undo is exact.
