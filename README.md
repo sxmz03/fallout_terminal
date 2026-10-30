@@ -1,8 +1,13 @@
-# RobCo Terminal
+# Fallout Terminal — RobCo for iTerm2
 
-A Fallout-inspired terminal setup for macOS and iTerm2: phosphor green colours,
-custom heavy lettering, a Vault-Tec corner logo, animated GIF startup, a typed
-welcome message and a three-line prompt.
+Turn your Mac’s iTerm2 terminal into a Fallout-inspired RobCo terminal, complete
+with green phosphor-style text, a custom heavy font, an animated startup GIF,
+a typed welcome message and a Vault-Tec corner logo.
+
+This is a complete installable setup: it bundles an iTerm2 profile, a standalone
+zsh theme, the font and all image/animation assets. A single install command
+adds a dedicated **RobCo Terminal** profile while keeping your existing profiles
+and shell configuration intact. Oh My Zsh is not required.
 
 ## Requirements
 
@@ -15,20 +20,21 @@ required. Installation is local; the installer does not access the network.
 
 ## Install
 
-Download this repository as a ZIP and extract it, or clone it with Git. Open a
-terminal in the extracted repository and run:
+With the requirements above installed, run these commands in iTerm2:
 
 ```sh
+git clone https://github.com/sxmz03/fallout_terminal.git
+cd fallout_terminal
 ./install.sh
 ```
+
+Alternatively, download this repository as a ZIP, extract it, open a terminal
+in the extracted folder and run `sh install.sh`. Git is only needed for cloning.
 
 Then open **iTerm2 → Profiles → RobCo Terminal**. Allow the background image if
 iTerm2 requests permission. The installer adds a separate dynamic profile and
 keeps your existing profiles, default profile, `.zshrc` and Oh My Zsh installation.
 You can choose RobCo as your default yourself in iTerm2 Settings → Profiles.
-
-The repository URL is deliberately not hardcoded: after publishing, use the
-Clone button on your GitHub repository to get its actual URL.
 
 The installer copies the runtime into:
 
