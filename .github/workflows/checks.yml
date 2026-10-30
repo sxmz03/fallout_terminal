@@ -1,0 +1,15 @@
+name: Checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check shell syntax
+        run: |
+          sh -n install.sh
+          for file in payload/*.zsh payload/shell/.zshrc; do zsh -n "$file"; done
+      - name: Test installer and runtime
+        run: python3 -m unittest discover -s tests -v
